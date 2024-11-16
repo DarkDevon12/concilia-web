@@ -1,0 +1,295 @@
+/*navbar*/
+
+body,
+ul {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+
+}
+
+a {
+    color: #04042b;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espaço entre a imagem e o texto */
+}
+
+#logo-img {
+    width: 80px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+}
+
+
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #a3a3a3;
+    position: fixed;
+    z-index: 2000;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+
+}
+
+#menu a {
+    display: block;
+    padding: 0.5rem;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: url('images/fundo1.jpg') no-repeat center center;
+}
+
+.service-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    background: url('images/fundo1.jpg') no-repeat center center;
+    gap: 20px;
+    height: 100vh;
+}
+
+
+h1 p {
+    color: wheat;
+}
+
+
+/* Conteúdo da Seção (Texto à Esquerda) */
+.service-content {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+}
+
+.service-content h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.service-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Imagem da Seção (Imagem à Direita) */
+.service-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.service-image img {
+    max-width: 35%;
+    height: 50%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.service-button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #0863c5;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-button:hover {
+    background-color: #0056b3;
+}
+
+.service-button-whatsapp{
+
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #067702;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+@media (max-width: 600px) {
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #a3a3a3;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(47vh);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .service-content p{
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+
+    .service-image img {
+        display: none;
+    }
+}
+
+/* Hero Section */
+
+.hero {
+    height: 100vh;
+    background: url('./images/justica-2.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+}
+
+.btn {
+    background-color: #04042b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    margin-bottom: 12rem;
+}
+
+.btn:hover {
+    background-color: #00192f;
+}
+
+/* Sobre Section */
+.sobre {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
