@@ -290,6 +290,14 @@ h1 p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.service-image-1 img {
+    max-width: 55%;
+    height: 55%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 
 .service-button {
     display: inline-block;
@@ -398,6 +406,9 @@ h1 p {
     }
 
     .service-image img {
+        display: none;
+    }
+    .service-image-1 img {
         display: none;
     }
 }
